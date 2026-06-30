@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "paolobrasolin",
+  "owner": {
+    "name": "Paolo Brasolin",
+    "email": "paolo.brasolin@gmail.com"
+  },
+  "description": "Catalog of @paolobrasolin's shared Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "pb-skills",
+      "source": "./plugins/pb-skills",
+      "description": "Shared @paolobrasolin's agent skills"
+    }
+  ]
+}
