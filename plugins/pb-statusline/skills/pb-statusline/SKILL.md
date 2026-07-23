@@ -10,7 +10,7 @@ This plugin ships `statusline.sh` at the plugin root. Claude Code plugins cannot
 
 ## Install (default action)
 
-1. Resolve the plugin root: `echo "$CLAUDE_PLUGIN_ROOT"` in Bash. If unset, derive it from this skill's own location — SKILL.md lives at `<plugin root>/skills/pb-statusline/SKILL.md`.
+1. Resolve the plugin root, preferring the **stable marketplace clone** over the versioned cache (`$CLAUDE_PLUGIN_ROOT` may point at `plugins/cache/<marketplace>/pb-statusline/<version>/`, whose path breaks on every version bump). Check for `${CLAUDE_CONFIG_DIR:-$HOME/.claude}/plugins/marketplaces/<marketplace>/plugins/pb-statusline/` first; fall back to `$CLAUDE_PLUGIN_ROOT`, or derive from this skill's own location (SKILL.md lives at `<plugin root>/skills/pb-statusline/SKILL.md`).
 2. Preflight: `command -v jq` — if missing, stop and tell the user to install jq first (`brew install jq` or their package manager). Ensure the script is executable: `chmod +x "<plugin root>/statusline.sh"`.
 3. Merge into the **user-level** settings file at `${CLAUDE_CONFIG_DIR:-$HOME/.claude}/settings.json`, creating it if absent and preserving every other key:
 
