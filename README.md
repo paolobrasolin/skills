@@ -2,11 +2,12 @@
 
 Personal repository of [@paolobrasolin](https://github.com/paolobrasolin)'s Claude Code plugins, published as a **plugin marketplace** (`.claude-plugin/marketplace.json`) for native, versioned install.
 
-Plugins live under `plugins/<name>/` and are listed in the marketplace manifest. Today it ships one:
+Plugins live under `plugins/<name>/` and are listed in the marketplace manifest. Today it ships two:
 
 | Plugin | What it does |
 |--------|--------------|
 | [`pb-skills`](./plugins/pb-skills) | Groups individual agent skills. Also installable cross-agent via `npx skills`. |
+| [`pb-statusline`](./plugins/pb-statusline) | Paolo's status line script, wired into your settings by the `/pb-statusline` installer skill. |
 
 ## The `pb-skills` plugin
 
@@ -22,6 +23,12 @@ skills/
 ```
 
 One real copy of each skill, reachable by both the marketplace plugin (through the symlink) and `npx skills` (at the top level). The symlink is the bridge between the conventional plugin layout and npx's need for a top-level `skills/`.
+
+## The `pb-statusline` plugin
+
+Ships `statusline.sh` — left-aligned `folder@branch`, right-aligned `model effort · ctx%/size · 5h%/countdown · 7d%/countdown`, with bold color-coded percentages and rate-limit countdowns colored by burn rate. Requires `jq`.
+
+Plugins can't set the top-level `statusLine` setting themselves, so after installing run `/pb-statusline` once: it points your user `settings.json` at the script *inside the plugin directory*, meaning later plugin updates reach the live status line with no re-install. Its skill lives in the plugin folder (not top-level `skills/`) because it ships executable code and isn't an `npx skills` candidate.
 
 ## Install
 

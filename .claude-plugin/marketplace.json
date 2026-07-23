@@ -11,6 +11,11 @@
       "name": "pb-skills",
       "source": "./plugins/pb-skills",
       "description": "Shared @paolobrasolin's agent skills"
+    },
+    {
+      "name": "pb-statusline",
+      "source": "./plugins/pb-statusline",
+      "description": "Paolo's status line script + /pb-statusline installer skill"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "pb-statusline",
+  "displayName": "@paolobrasolin Statusline",
+  "version": "0.1.0",
+  "description": "Paolo's Claude Code status line — folder@branch on the left; model, context, and burn-rate-colored rate limits on the right. Ships the script plus a /pb-statusline installer skill.",
+  "author": {
+    "name": "Paolo Brasolin",
+    "email": "paolo.brasolin@gmail.com"
+  },
+  "repository": "https://github.com/paolobrasolin/skills",
+  "keywords": [
+    "statusline"
+  ]
+}
