@@ -30,4 +30,5 @@ plan.
 8. **Apply.** This is the one time `MEMORY.md` is rewritten whole. Then check: every `MEMORY.md`
    line points to an existing file and every file has a line; `[[links]]` point to existing
    slugs (or are deliberate placeholders); stream bodies are within 40 lines.
-9. **Report:** files created, edited, deleted; the backup path; what is left for the user.
+9. **Report:** files created, edited, deleted; the backup path, with the command that deletes it
+   (`rm -r <path>`) for when the user is satisfied; what is left for the user.
