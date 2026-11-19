@@ -14,7 +14,7 @@ plan.
    - snapshot of an open stream → its new stream file (`template.md`);
    - lessons, gotchas, recipes → topical memories, merged into existing ones where they fit;
    - feedback → feedback memories (already there: leave as is);
-   - project facts → the project's state memory;
+   - project facts → project memories, one topic each;
    - log of finished work → dropped, after checking it is recorded elsewhere: sample its hashes
      in `git log`, its issues on GitHub, its decisions in the project's docs. What is recorded
      nowhere: list it for the user to decide (keep in a memory, move to a repo doc, drop);

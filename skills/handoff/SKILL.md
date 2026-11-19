@@ -20,7 +20,7 @@ Arguments: `$ARGUMENTS`. Empty or a stream name → handoff. `resume [stream]`, 
 | Snapshot of a stream: state, next steps, what waits, what to watch | The stream file, rewritten each time, body ≤ 40 lines |
 | Lessons, gotchas, recipes that outlive the stream | Topical memory files, one topic each, edited in place |
 | The user's corrections and confirmed ways of working | Feedback memories |
-| Durable project facts (layout, toolchain, conventions) | The project's state memory |
+| Durable project facts (layout, toolchain, conventions) | Project memories (type `project`), one topic each |
 | Log of finished work | Nowhere in memory: git, issues and project docs hold it |
 
 If a decision or result is recorded nowhere but in this session, say so and propose where it
