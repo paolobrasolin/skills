@@ -36,7 +36,11 @@ session: `auth-rework`, `data-import`. Format: `template.md` next to this file. 
 holds the state a resume checks; the body holds what a reader needs.
 
 Every body line must be true now and needed for what comes next; delete the rest. No narrative
-of what was done: that is the log.
+of what was done: that is the log. An item is one or two sentences: detail lives where it lasts
+(a repo doc, an issue, a topical memory), and the item points to it.
+
+While you hold a stream you may patch its file when something a successor would need changes (a
+decision lands, HEAD moves). A handoff does not patch: it writes the body anew.
 
 Its line in `MEMORY.md`, at the top with the other open streams:
 `- [HANDOFF <stream>](handoff-<stream>.md) — <YYYY-MM-DD>: next = <first action>`
