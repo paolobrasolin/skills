@@ -104,7 +104,7 @@ mention `/handoff migrate` in your report, not in the stream file.
    commits since (`git log <head>..HEAD`; say which stream they belong to if another stream file
    claims them); pushed state (with no remote, `false` and `no-remote` say the same);
    uncommitted files against `own_uncommitted` and `do_not_touch` (one in neither list is
-   unrecognised). Check issues too if the project tracks work there. Where the project's
+   unrecognised). Check the issues or tasks the stream file names, too. Where the project's
    records and the stream file disagree, the records win: say what differs.
 4. If `active_in` names a session that ListAgents shows running, stop and ask. If it names one
    that isn't running, or this very session after a `/clear`, the last holder never handed off
