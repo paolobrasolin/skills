@@ -118,9 +118,10 @@ mention `/handoff migrate` in your report, not in the stream file.
    and the snapshot may predate its last work: say so in the report (who, since when, `checked`)
    and trust the records over it. Then set `active_in` (your session's name) and `active_since`
    (today) under `metadata`.
-5. Report in at most 10 lines: where the stream stands, any drift, the first Next step, any
-   choice that needs the user (explained plainly), and `checkout` if it is not the directory you
-   are in. Wait for the user's go before editing anything else, the stream file included.
+5. Report in at most 10 items of one or two sentences: where the stream stands, any drift, the
+   first Next step, any choice that needs the user (explained plainly), and `checkout` if it is
+   not the directory you are in. Wait for the user's go before editing anything else, the stream
+   file included.
 
 ## Mode: close — `/handoff close [stream]`
 
