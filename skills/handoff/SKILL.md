@@ -41,6 +41,9 @@ of what was done: that is the log.
 Its line in `MEMORY.md`, at the top with the other open streams:
 `- [HANDOFF <stream>](handoff-<stream>.md) — <YYYY-MM-DD>: next = <first action>`
 
+A stream file written by an earlier version of this skill may lack a section or a field: read it
+as it is. The next handoff writes it in the current format; nothing else has to migrate it.
+
 ## Rules for parallel sessions
 
 Several sessions may work on one project at once, in one checkout or in worktrees, and they

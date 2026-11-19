@@ -3,6 +3,11 @@
 Once per project, from a session in that project. Nothing changes until the user approves the
 plan.
 
+Two cases first. If the project already uses stream files and memory holds no old-style handoff
+material (step 2 lists what counts), there is nothing to run: say so and stop. Stream files
+written by an earlier version of the skill need no migration either: each is written in the
+current format at its next handoff. Otherwise, follow the steps.
+
 1. **Alone.** ListAgents: if another session on this project is running, ask the user to hand it
    off or close it first, since migration rewrites shared files.
 2. **Inventory.** Read `MEMORY.md` and every memory file. Find the handoff material: files or
