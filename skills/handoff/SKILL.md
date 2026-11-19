@@ -70,14 +70,22 @@ share the memory directory.
 
 ## Mode: handoff — `/handoff [stream]`
 
-1. Stream name: the one you resumed; else the argument; else the session's name if set with
-   `claude -n`; else propose one and confirm it with the user.
+Two exits first. If this session did nothing a fresh session would continue, say so and write
+nothing. If the stream is finished (nothing left in Next, nothing waiting), propose
+`/handoff close` instead of a snapshot.
+
+1. Stream name: the one you resumed; else the argument; else an open stream in `MEMORY.md` that
+   this session's work continues; else the session's name if set with `claude -n`; else propose
+   one and confirm it with the user. If the argument names another stream than the one you
+   resumed, ask which one is meant.
 2. Check git in every repo the stream touched: branch, HEAD, ahead/behind upstream, your
    uncommitted files. From commands, not from recollection.
 3. Sort the session's content by the table above. Put lessons and feedback into an existing
    topical file where one fits (look first); create a file only for a new topic, with its
    `MEMORY.md` line. Fix or delete memory lines this session proved wrong.
-4. Rewrite the stream file from the template: `checked` = today, no `active_in`.
+4. Read the current stream file if there is one, then write it anew from the template: carry over
+   what is still true (parked items above all) and drop the rest. `checked` = today, no
+   `active_in`.
 5. Update the stream's `MEMORY.md` line.
 6. Report in a few lines: the Next list, what changed in memory (files created, edited,
    deleted), anything left uncommitted or unpushed.
