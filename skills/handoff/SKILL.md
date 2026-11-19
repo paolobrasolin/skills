@@ -29,10 +29,6 @@ belongs (a repo doc, an issue comment); writing there follows the project's usua
 Memory is the auto-memory directory named in the system prompt; follow its file format
 (frontmatter, one line per memory in `MEMORY.md`).
 
-If the project keeps its handoff in the repo (its CLAUDE.md or a memory pointer says so, e.g.
-`docs/HANDOFF.md`), write the stream file there instead, same format, and leave committing to the
-project's usual rules. Memory then only points to it.
-
 ## The stream file
 
 `handoff-<stream>.md` in memory. `<stream>` is short kebab-case naming the work, not the
