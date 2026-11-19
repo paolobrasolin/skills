@@ -85,7 +85,7 @@ nothing. If the stream is finished (nothing left in Next, nothing waiting), prop
    `MEMORY.md` line. Fix or delete memory lines this session proved wrong.
 4. Read the current stream file if there is one, then write it anew from the template: carry over
    what is still true (parked items above all) and drop the rest. `checked` = today, no
-   `active_in`.
+   `active_in`; uncommitted files that aren't yours go in `do_not_touch`.
 5. Update the stream's `MEMORY.md` line.
 6. Report in a few lines: the Next list, what changed in memory (files created, edited,
    deleted), anything left uncommitted or unpushed.
@@ -102,9 +102,9 @@ mention `/handoff migrate` in your report, not in the stream file.
 2. Read the stream file (`template.md` explains its fields) and everything in `read_first`.
 3. Check each repo in `repos` against git: the path exists; branch; HEAD as recorded, or the
    commits since (`git log <head>..HEAD`; say which stream they belong to if another stream file
-   claims them); pushed state; uncommitted files against `own_uncommitted`. Check issues too if
-   the project tracks work there. Where the project's records and the stream file disagree, the
-   records win: say what differs.
+   claims them); pushed state; uncommitted files against `own_uncommitted` and `do_not_touch`
+   (one in neither list is unrecognised). Check issues too if the project tracks work there.
+   Where the project's records and the stream file disagree, the records win: say what differs.
 4. If `active_in` names a session that ListAgents shows running, stop and ask. If it names one
    that isn't running, or this very session after a `/clear`, the last holder never handed off
    and the snapshot may predate its last work: say so in the report (who, since when, `checked`)

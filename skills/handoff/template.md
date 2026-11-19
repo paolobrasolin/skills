@@ -45,7 +45,8 @@ Field notes (leave this comment out of real stream files):
 - repos: every repo the stream touches; `pushed` = HEAD is on its upstream (`true` or `false`),
   or `no-remote` when the repo has none;
   `own_uncommitted` = this stream's files left uncommitted;
-  `do_not_touch` = files there that belong to someone else (e.g. the user's untracked notes).
+  `do_not_touch` = files there that are someone else's or of unknown owner (e.g. the user's
+  untracked notes).
 - read_first: memories and repo files a resuming session reads before anything else.
 - Body ≤ 40 lines; an item is one or two sentences. Empty sections are dropped, not left with
   placeholders.
