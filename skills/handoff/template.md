@@ -42,7 +42,8 @@ Field notes (leave this comment out of real stream files):
 - active_in / active_since: added under `metadata` only while a session holds the stream (its
   ListAgents name, the date), removed on handoff. Don't write them as null: the memory system
   re-serializes the frontmatter, drops null values, and adds node_type, originSessionId, modified.
-- repos: every repo the stream touches; `pushed` = HEAD is on its upstream;
+- repos: every repo the stream touches; `pushed` = HEAD is on its upstream (`true` or `false`),
+  or `no-remote` when the repo has none;
   `own_uncommitted` = this stream's files left uncommitted;
   `do_not_touch` = files there that belong to someone else (e.g. the user's untracked notes).
 - read_first: memories and repo files a resuming session reads before anything else.

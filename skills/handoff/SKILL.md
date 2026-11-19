@@ -110,9 +110,13 @@ mention `/handoff migrate` in your report, not in the stream file.
 
 For a finished stream.
 
-1. Move what lasts (lessons, feedback, project facts) to their memories.
-2. Check git: if anything of the stream is uncommitted or unpushed, report it and stop.
-3. Show the user what will be deleted; on their yes, delete the stream file and its `MEMORY.md`
+1. If `active_in` names another session that ListAgents shows running, stop and ask.
+2. Check the Goal's "done when" against the project's records and say what you find. If it is
+   not met, say what is left and ask before going on.
+3. Move what lasts (lessons, feedback, project facts) to their memories.
+4. Check git: if anything of the stream is uncommitted, or unpushed in a repo that has a remote,
+   report it and stop.
+5. Show the user what will be deleted; on their yes, delete the stream file and its `MEMORY.md`
    line.
 
 ## Mode: migrate — `/handoff migrate`
