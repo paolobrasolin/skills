@@ -46,7 +46,8 @@ of what was done: that is the log. An item is one or two sentences: detail lives
 (a repo doc, an issue, a topical memory), and the item points to it.
 
 While you hold a stream you may patch its file when something a successor would need changes (a
-decision lands, HEAD moves). A handoff does not patch: it writes the body anew.
+decision lands, HEAD moves), but not before the user's go that ends a resume. A handoff does not
+patch: it writes the body anew.
 
 Its line in `MEMORY.md`, at the top with the other open streams:
 `- [HANDOFF <stream>](handoff-<stream>.md) — <YYYY-MM-DD>: next = <first action>`
