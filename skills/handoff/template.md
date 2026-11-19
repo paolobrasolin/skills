@@ -35,8 +35,8 @@ the decisions in force, each with where it is recorded or will be.
 
 <!--
 Field notes (leave this comment out of real stream files):
-- description: stays the same from handoff to handoff. The date and the next action live in
-  `checked`, in the body and in the `MEMORY.md` line, nowhere else.
+- description: what the stream is for, which does not change from handoff to handoff. The date
+  and the next action live in `checked`, in the body and in the `MEMORY.md` line, nowhere else.
 - checked: the day the body or `repos` was last brought up to date. Taking or releasing
   `active_in` does not change it.
 - active_in / active_since: added under `metadata` only while a session holds the stream (its

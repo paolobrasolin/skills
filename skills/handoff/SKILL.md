@@ -112,7 +112,7 @@ mention `/handoff migrate` in your report, not in the stream file.
    (today) under `metadata`.
 5. Report in at most 10 lines: where the stream stands, any drift, the first Next step, any
    choice that needs the user (explained plainly), and `checkout` if it is not the directory you
-   are in. Wait for the user's go before editing anything else.
+   are in. Wait for the user's go before editing anything else, the stream file included.
 
 ## Mode: close — `/handoff close [stream]`
 

@@ -3,7 +3,7 @@
 Once per project, from a session in that project. Nothing changes until the user approves the
 plan.
 
-Two cases first. If the project already uses stream files and memory holds no old-style handoff
+Two cases first. If the project already uses stream files and memory holds no other handoff
 material (step 2 lists what counts), there is nothing to run: say so and stop. Stream files
 written by an earlier version of the skill need no migration either: each is written in the
 current format at its next handoff. Otherwise, follow the steps.
