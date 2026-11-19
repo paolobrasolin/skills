@@ -107,8 +107,8 @@ mention `/handoff migrate` in your report, not in the stream file.
    HANDOFF lines of `MEMORY.md`) and ask.
 2. Read the stream file (`template.md` explains its fields) and everything in `read_first`.
 3. Check each repo in `repos` against git: the path exists; branch; HEAD as recorded, or the
-   commits since (`git log <head>..HEAD`; say which stream they belong to if another stream file
-   claims them); pushed state (with no remote, `false` and `no-remote` say the same);
+   commits since (`git log <head>..HEAD`; if another stream file's `head` is among them, name
+   that stream); pushed state (with no remote, `false` and `no-remote` say the same);
    uncommitted files against `own_uncommitted` and `do_not_touch` (one in neither list is
    unrecognised). Check the issues or tasks the stream file names, too. Where the records and
    the stream file disagree, the records win: say what differs.
