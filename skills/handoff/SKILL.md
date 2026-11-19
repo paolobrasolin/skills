@@ -102,9 +102,10 @@ mention `/handoff migrate` in your report, not in the stream file.
 2. Read the stream file (`template.md` explains its fields) and everything in `read_first`.
 3. Check each repo in `repos` against git: the path exists; branch; HEAD as recorded, or the
    commits since (`git log <head>..HEAD`; say which stream they belong to if another stream file
-   claims them); pushed state; uncommitted files against `own_uncommitted` and `do_not_touch`
-   (one in neither list is unrecognised). Check issues too if the project tracks work there.
-   Where the project's records and the stream file disagree, the records win: say what differs.
+   claims them); pushed state (with no remote, `false` and `no-remote` say the same);
+   uncommitted files against `own_uncommitted` and `do_not_touch` (one in neither list is
+   unrecognised). Check issues too if the project tracks work there. Where the project's
+   records and the stream file disagree, the records win: say what differs.
 4. If `active_in` names a session that ListAgents shows running, stop and ask. If it names one
    that isn't running, or this very session after a `/clear`, the last holder never handed off
    and the snapshot may predate its last work: say so in the report (who, since when, `checked`)
