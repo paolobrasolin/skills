@@ -13,6 +13,12 @@ it lasts.
 Arguments: `$ARGUMENTS`. Empty or a stream name → handoff. `resume [stream]`, `close [stream]`,
 `migrate` → those modes. A request in words maps to the mode it means.
 
+## Terms
+
+- Open stream: a stream with a HANDOFF line in `MEMORY.md`.
+- Holder: the session a stream file names in `active_in`.
+- Records: git, and the project's issues and docs.
+
 ## Where things go
 
 | Content | Destination |
@@ -104,8 +110,8 @@ mention `/handoff migrate` in your report, not in the stream file.
    commits since (`git log <head>..HEAD`; say which stream they belong to if another stream file
    claims them); pushed state (with no remote, `false` and `no-remote` say the same);
    uncommitted files against `own_uncommitted` and `do_not_touch` (one in neither list is
-   unrecognised). Check the issues or tasks the stream file names, too. Where the project's
-   records and the stream file disagree, the records win: say what differs.
+   unrecognised). Check the issues or tasks the stream file names, too. Where the records and
+   the stream file disagree, the records win: say what differs.
 4. If `active_in` names a session that ListAgents shows running, stop and ask. If it names one
    that isn't running, or this very session after a `/clear`, the last holder never handed off
    and the snapshot may predate its last work: say so in the report (who, since when, `checked`)
@@ -120,8 +126,8 @@ mention `/handoff migrate` in your report, not in the stream file.
 For a finished stream.
 
 1. If `active_in` names another session that ListAgents shows running, stop and ask.
-2. Check the Goal's "done when" against the project's records and say what you find. If it is
-   not met, say what is left and ask before going on.
+2. Check the Goal's "done when" against the records and say what you find. If it is not met,
+   say what is left and ask before going on.
 3. Move what lasts (lessons, feedback, project facts) to their memories.
 4. Check git: if anything of the stream is uncommitted, or unpushed in a repo that has a remote,
    report it and stop.
