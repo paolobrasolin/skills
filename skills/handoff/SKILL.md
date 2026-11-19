@@ -70,7 +70,7 @@ share the memory directory.
   name plus a short suffix (`my-project-aa`); any other name was set with `claude -n <name>`.
 - In git, record and touch only your own commits and files. Never commit, stash, reset, check
   out or clean anything you didn't make: a dirty tree may be another stream's work. Mention
-  unrecognised uncommitted files; don't act on them.
+  unrecognised uncommitted files by name; don't open, change or move them: they may hold secrets.
 - `active_in` (with `active_since`) marks the session holding a stream: added on resume, removed
   on handoff. Absent means nobody holds it. So does a name that isn't running, which also tells
   you that the last holder never handed off.
