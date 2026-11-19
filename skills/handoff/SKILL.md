@@ -74,7 +74,7 @@ share the memory directory.
 Handoff never commits or pushes; if the user wants that, it is a separate request under the
 project's rules. If memory still holds old-style handoff notes (dated "next session" files,
 HANDOFF lines with no stream file, state inside `MEMORY.md` lines), don't fix them here:
-mention `/handoff migrate`.
+mention `/handoff migrate` in your report, not in the stream file.
 
 ## Mode: resume — `/handoff resume [stream]`
 
