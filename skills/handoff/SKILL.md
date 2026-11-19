@@ -65,7 +65,8 @@ share the memory directory.
   out or clean anything you didn't make: a dirty tree may be another stream's work. Mention
   unrecognised uncommitted files; don't act on them.
 - `active_in` (with `active_since`) marks the session holding a stream: added on resume, removed
-  on handoff. Absent means nobody holds it.
+  on handoff. Absent means nobody holds it. So does a name that isn't running, which also tells
+  you that the last holder never handed off.
 
 ## Mode: handoff — `/handoff [stream]`
 
@@ -96,11 +97,14 @@ mention `/handoff migrate` in your report, not in the stream file.
    claims them); pushed state; uncommitted files against `own_uncommitted`. Check issues too if
    the project tracks work there. Where the project's records and the stream file disagree, the
    records win: say what differs.
-4. If `active_in` names a session that ListAgents shows running, stop and ask. Otherwise add
-   `active_in` (your session's name) and `active_since` (today) under `metadata`.
+4. If `active_in` names a session that ListAgents shows running, stop and ask. If it names one
+   that isn't running, or this very session after a `/clear`, the last holder never handed off
+   and the snapshot may predate its last work: say so in the report (who, since when, `checked`)
+   and trust the records over it. Then set `active_in` (your session's name) and `active_since`
+   (today) under `metadata`.
 5. Report in at most 10 lines: where the stream stands, any drift, the first Next step, any
-   choice that needs the user (explained plainly). Wait for the user's go before editing
-   anything else.
+   choice that needs the user (explained plainly), and `checkout` if it is not the directory you
+   are in. Wait for the user's go before editing anything else.
 
 ## Mode: close — `/handoff close [stream]`
 
