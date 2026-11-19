@@ -20,6 +20,9 @@ metadata:
 
 **Goal.** One or two sentences: what the stream is for, and when it is done.
 
+**State.** Two or three sentences: what exists now, what has been checked and what hasn't, and
+the decisions in force, each with where it is recorded or will be.
+
 **Next.**
 1. The first concrete action, specific enough to start without asking.
 2. …
