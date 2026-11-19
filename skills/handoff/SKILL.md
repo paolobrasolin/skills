@@ -45,6 +45,9 @@ decision lands, HEAD moves). A handoff does not patch: it writes the body anew.
 Its line in `MEMORY.md`, at the top with the other open streams:
 `- [HANDOFF <stream>](handoff-<stream>.md) — <YYYY-MM-DD>: next = <first action>`
 
+Whenever you change the body or `repos`, set `checked` to today and keep that line's date and
+first action in step. Taking or releasing `active_in` does not count.
+
 A stream file written by an earlier version of this skill may lack a section or a field: read it
 as it is. The next handoff writes it in the current format; nothing else has to migrate it.
 

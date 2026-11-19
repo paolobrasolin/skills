@@ -1,6 +1,6 @@
 ---
 name: handoff-<stream>
-description: "HANDOFF <stream> <YYYY-MM-DD>: <state in a few words>; next = <first action>"
+description: "HANDOFF <stream>: <what the stream is for, in a few words>"
 metadata:
   type: project
   stream: <stream>
@@ -35,7 +35,10 @@ the decisions in force, each with where it is recorded or will be.
 
 <!--
 Field notes (leave this comment out of real stream files):
-- checked: when the git state in `repos` was last verified by commands.
+- description: stays the same from handoff to handoff. The date and the next action live in
+  `checked`, in the body and in the `MEMORY.md` line, nowhere else.
+- checked: the day the body or `repos` was last brought up to date. Taking or releasing
+  `active_in` does not change it.
 - active_in / active_since: added under `metadata` only while a session holds the stream (its
   ListAgents name, the date), removed on handoff. Don't write them as null: the memory system
   re-serializes the frontmatter, drops null values, and adds node_type, originSessionId, modified.
