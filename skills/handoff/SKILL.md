@@ -46,8 +46,8 @@ of what was done: that is the log. An item is one or two sentences: detail lives
 (a repo doc, an issue, a topical memory), and the item points to it.
 
 While you hold a stream you may patch its file when something a successor would need changes (a
-decision lands, HEAD moves), but not before the user's go that ends a resume. A handoff does not
-patch: it writes the body anew.
+decision lands, HEAD moves). Between a resume and the user's go you write only `active_in`. A
+handoff does not patch: it writes the body anew.
 
 Its line in `MEMORY.md`, at the top with the other open streams:
 `- [HANDOFF <stream>](handoff-<stream>.md) — <YYYY-MM-DD>: next = <first action>`
@@ -55,8 +55,9 @@ Its line in `MEMORY.md`, at the top with the other open streams:
 Whenever you change the body or `repos`, set `checked` to today and keep that line's date and
 first action in step. Taking or releasing `active_in` does not count.
 
-A stream file written by an earlier version of this skill may lack a section or a field: read it
-as it is. The next handoff writes it in the current format; nothing else has to migrate it.
+A stream file written by an earlier version of this skill may differ from the template (a missing
+section or field, a dated description): read it as it is. The next handoff writes it in the
+current format; nothing else has to migrate it.
 
 ## Rules for parallel sessions
 
@@ -85,8 +86,9 @@ nothing. If the stream is finished (nothing left in Next, nothing waiting), prop
    this session's work continues; else the session's name if set with `claude -n`; else propose
    one and confirm it with the user. If the argument names another stream than the one you
    resumed, ask which one is meant.
-2. Check git in every repo the stream touched: branch, HEAD, ahead/behind upstream, your
-   uncommitted files. From commands, not from recollection. If a commit since the recorded
+2. Check git in every repo the stream touched: branch, HEAD, ahead/behind upstream (`no-remote`
+   if it has none), uncommitted files. From commands, not from recollection: your memory of the
+   session tells you only which commits and files are yours. If a commit since the recorded
    `head` isn't yours, say so in the report.
 3. Sort the session's content by the table above. Put lessons and feedback into an existing
    topical file where one fits (look first); create a file only for a new topic, with its
@@ -113,9 +115,10 @@ mention `/handoff migrate` in your report, not in the stream file.
 3. Check each repo in `repos` against git: the path exists; branch; HEAD as recorded, or the
    commits since (`git log <head>..HEAD`; if another stream file's `head` is among them, name
    that stream); pushed state (with no remote, `false` and `no-remote` say the same);
-   uncommitted files against `own_uncommitted` and `do_not_touch` (one in neither list is
-   unrecognised). Check the issues or tasks the stream file names, too. Where the records and
-   the stream file disagree, the records win: say what differs.
+   uncommitted files, each untracked one listed (`git status -uall`), against `own_uncommitted`
+   and `do_not_touch` (one in neither list is unrecognised). Check the issues or tasks the
+   stream file names, too. Where the records and the stream file disagree, the records win: say
+   what differs.
 4. If `active_in` names a session that ListAgents shows running, stop and ask. If it names one
    that isn't running, or this very session after a `/clear`, the last holder never handed off
    and the snapshot may predate its last work: say so in the report (who, since when, `checked`)
