@@ -86,7 +86,8 @@ nothing. If the stream is finished (nothing left in Next, nothing waiting), prop
    one and confirm it with the user. If the argument names another stream than the one you
    resumed, ask which one is meant.
 2. Check git in every repo the stream touched: branch, HEAD, ahead/behind upstream, your
-   uncommitted files. From commands, not from recollection.
+   uncommitted files. From commands, not from recollection. If a commit since the recorded
+   `head` isn't yours, say so in the report.
 3. Sort the session's content by the table above. Put lessons and feedback into an existing
    topical file where one fits (look first); create a file only for a new topic, with its
    `MEMORY.md` line. Fix or delete memory lines this session proved wrong.
