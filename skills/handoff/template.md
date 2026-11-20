@@ -49,6 +49,8 @@ Field notes (leave this comment out of real stream files):
   `do_not_touch` = files there that are someone else's or of unknown owner (e.g. the user's
   untracked notes).
 - read_first: memories and repo files a resuming session reads before anything else.
+- Next: a step that needs the user's go is still a Next item, not a Waiting one; say in the item
+  that it needs the go.
 - Body ≤ 40 lines, where an item or a paragraph is one line: don't hard-wrap it. An item is one
   or two sentences. Empty sections are dropped, not left with placeholders.
 -->
