@@ -20,8 +20,7 @@ metadata:
 
 **Goal.** One or two sentences: what the stream is for, and when it is done.
 
-**State.** Two or three sentences: what exists now, what has been checked and what hasn't, and
-the decisions in force, each with where it is recorded or will be.
+**State.** Two or three sentences: what exists now, what has been checked and what hasn't, and the decisions in force, each with where it is recorded or will be.
 
 **Next.**
 1. The first concrete action, specific enough to start without asking.
@@ -50,6 +49,6 @@ Field notes (leave this comment out of real stream files):
   `do_not_touch` = files there that are someone else's or of unknown owner (e.g. the user's
   untracked notes).
 - read_first: memories and repo files a resuming session reads before anything else.
-- Body ≤ 40 lines; an item is one or two sentences. Empty sections are dropped, not left with
-  placeholders.
+- Body ≤ 40 lines, where an item or a paragraph is one line: don't hard-wrap it. An item is one
+  or two sentences. Empty sections are dropped, not left with placeholders.
 -->
