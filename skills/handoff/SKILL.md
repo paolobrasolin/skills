@@ -90,7 +90,8 @@ nothing. If the stream is finished (nothing left in Next, nothing waiting), prop
    `head` isn't yours, say so in the report.
 3. Sort the session's content by the table above. Put lessons and feedback into an existing
    topical file where one fits (look first); create a file only for a new topic, with its
-   `MEMORY.md` line. Fix or delete memory lines this session proved wrong.
+   `MEMORY.md` line. When you add to a file, bring its description and its `MEMORY.md` line up
+   to date. Fix or delete memory lines this session proved wrong.
 4. Read the current stream file if there is one, then write it anew from the template: carry over
    what is still true (parked items above all) and drop the rest. `checked` = today, no
    `active_in`; uncommitted files that aren't yours go in `do_not_touch`.
