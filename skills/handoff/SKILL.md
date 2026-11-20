@@ -95,7 +95,8 @@ nothing. If the stream is finished (nothing left in Next, nothing waiting), prop
    `active_in`; uncommitted files that aren't yours go in `do_not_touch`.
 5. Update the stream's `MEMORY.md` line.
 6. Report in a few lines: the Next list, what changed in memory (files created, edited,
-   deleted), anything left uncommitted or unpushed.
+   deleted), anything left uncommitted or unpushed, and any decision recorded nowhere else, with
+   where you propose to put it.
 
 Handoff never commits or pushes; if the user wants that, it is a separate request under the
 project's rules. If memory still holds old-style handoff notes (dated "next session" files,
